@@ -45,7 +45,7 @@ const startServer = async () => {
     throw new Error('MongoDB connection is not ready.');
   }
 
-  app.listen(PORT, () => {
+  app.listen(PORT,"0.0.0.0", () => {
     console.log(`Server is running on port ${PORT}`);
   });
 };
