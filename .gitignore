@@ -1,3 +1,15 @@
+#node_modules
 node_modules/
+#env
+env/
 .env
-users.db
+.env.*
+!.env.example
+#dist
+dist/
+#build
+build/
+#logs
+logs/
+#IDE files
+.idea/

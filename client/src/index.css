@@ -2,9 +2,179 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
+html {
+  font-size: 90%;
+}
+
 * {
   font-family: 'Poppins', sans-serif;
 }
 
+.theme-dark {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.theme-dark .bg-white,
+.theme-dark .bg-neutral-50,
+.theme-dark .bg-neutral-100,
+.theme-dark .bg-neutral-200,
+.theme-dark .bg-emerald-50,
+.theme-dark .bg-slate-50 {
+  background-color: #111827 !important;
+}
+
+.theme-dark .search-bar {
+  background: rgba(30, 41, 59, 0.9) !important;
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.15);
+}
+
+.theme-dark .search-input,
+.theme-dark .search-input::placeholder,
+.theme-dark .search-bar .search-input {
+  color: #e2e8f0 !important;
+}
+
+.theme-dark .search-suggestions {
+  background: #111827 !important;
+  border-color: #334155 !important;
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.45);
+}
+
+.theme-dark .search-suggestions button {
+  color: #e2e8f0 !important;
+}
+
+.theme-dark .search-suggestions button:hover {
+  background: rgba(51, 65, 85, 0.8) !important;
+}
+
+.theme-dark .text-neutral-900,
+.theme-dark .text-neutral-800,
+.theme-dark .text-neutral-700,
+.theme-dark .text-neutral-600,
+.theme-dark .text-neutral-500,
+.theme-dark .text-neutral-400,
+.theme-dark .text-neutral-300,
+.theme-dark .text-neutral-200 {
+  color: #e2e8f0 !important;
+}
+
+.theme-dark .border-neutral-100,
+.theme-dark .border-neutral-200,
+.theme-dark .border-neutral-300,
+.theme-dark .border-slate-200 {
+  border-color: #334155 !important;
+}
+
+.theme-dark .text-neutral-500,
+.theme-dark .text-neutral-400 {
+  opacity: 0.9;
+}
+
+.bottom-nav-shell {
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14), 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+.bottom-nav-item-active {
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.14);
+  color: #0f172a;
+}
+
+.navlink-active {
+  background: #e2e8f0;
+}
+
+.sidebar-nav-item-active {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.sidebar-nav-item-hover:hover {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.avatar-shell {
+  background: #f1f5f9;
+}
+
+.theme-dark .bottom-nav-shell {
+  background: rgba(17, 24, 39, 0.96) !important;
+  border-color: rgba(148, 163, 184, 0.22) !important;
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.54), 0 2px 8px rgba(15, 23, 42, 0.3);
+}
+
+.theme-dark .bottom-nav-item-active {
+  background: linear-gradient(135deg, #334155 0%, #475569 100%) !important;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.45);
+  color: #f8fafc !important;
+}
+
+.theme-dark .navlink-active {
+  background: #334155 !important;
+}
+
+.theme-dark .sidebar-nav-item-active {
+  background: #334155 !important;
+  color: #f8fafc !important;
+}
+
+.theme-dark .sidebar-nav-item-hover:hover {
+  background: rgba(51, 65, 85, 0.7) !important;
+  color: #f8fafc !important;
+}
+
+.theme-dark .avatar-shell {
+  background: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+.theme-dark .shadow-sm {
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.5) !important;
+}
+
+.theme-dark input,
+.theme-dark select,
+.theme-dark button {
+  color: inherit;
+}
+
+a:active {
+  color: goldenrod;
+}
 
 
+        @keyframes rl-toss {
+          0%   { transform: translateY(0) rotate(0deg); }
+          40%  { transform: translateY(-46px) rotate(150deg); }
+          55%  { transform: translateY(-52px) rotate(190deg); }
+          100% { transform: translateY(0) rotate(360deg); }
+        }
+        @keyframes rl-steam {
+          0%   { transform: translateY(0); opacity: 0; }
+          25%  { opacity: 0.55; }
+          100% { transform: translateY(-22px); opacity: 0; }
+        }
+        @keyframes rl-dot {
+          0%, 20% { opacity: 0; }
+          50% { opacity: 1; }
+          100% { opacity: 0; }
+        }
+        .rl-toss-piece {
+          transform-box: fill-box;
+          transform-origin: center;
+          animation: rl-toss 1.4s cubic-bezier(.45,0,.55,1) infinite;
+        }
+        .rl-steam {
+          transform-box: fill-box;
+          transform-origin: center;
+          animation: rl-steam 2.2s ease-out infinite;
+        }
+        .rl-dot {
+          animation: rl-dot 1.4s ease-in-out infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .rl-toss-piece, .rl-steam, .rl-dot { animation: none; }
+        }
