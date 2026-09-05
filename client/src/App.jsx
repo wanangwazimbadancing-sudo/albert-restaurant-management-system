@@ -16,7 +16,7 @@ import { COLORS } from "./constants/colors";
 import { Icon } from "./components/Icon";
 import img from "./assets/logo.png";
 
-const API_URL = "https://albert-quick-dine-server.onrender.com/api";
+const API_URL = import.meta.env.VITE_API_URL || "https://albert-quick-dine-server.onrender.com/api";
 const authHeaders = () => ({
   headers: { Authorization: `Bearer ${localStorage.getItem("authToken")}` },
 });

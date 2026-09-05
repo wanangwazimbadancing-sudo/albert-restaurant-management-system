@@ -16,7 +16,7 @@ const publicUser = (user) => ({
 });
 
 const sendPasswordResetEmail = async (email, token) => {
-  const clientUrl = (process.env.CLIENT_URL || 'http://localhost:5173').replace(/\/$/, '');
+  const clientUrl = (process.env.CLIENT_URL || 'https://albert-restaurant-management-system.onrender.com').replace(/\/$/, '');
   const response = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
