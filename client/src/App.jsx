@@ -16,7 +16,7 @@ import { COLORS } from "./constants/colors";
 import { Icon } from "./components/Icon";
 import img from "./assets/logo.png";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://albert-quick-dine-server.onrender.com/api";
 const authHeaders = () => ({
   headers: { Authorization: `Bearer ${localStorage.getItem("authToken")}` },
 });
@@ -83,7 +83,7 @@ const App = () => {
     }
 
     axios
-      .get("http://localhost:5000/api/auth/me", {
+      .get(`${API_URL}/auth/me`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(({ data }) => {
@@ -108,7 +108,7 @@ const App = () => {
 
     setOrdersLoading(true);
     axios
-      .get("http://localhost:5000/api/orders", {
+      .get(`${API_URL}/orders`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(({ data }) => setOrders(data.orders.map(normalizeOrder)))
@@ -201,7 +201,7 @@ const App = () => {
 
   const handleLogin = async (form, mode) => {
     const { data } = await axios.post(
-      `http://localhost:5000/api/auth/${mode === "login" ? "login" : "register"}`,
+      `${API_URL}/auth/${mode === "login" ? "login" : "register"}`,
       {
         ...(mode === "signup" ? { name: form.name } : {}),
         email: form.email,
