@@ -263,7 +263,7 @@ const App = () => {
         <main className="flex-1 px-4 sm:px-6 lg:px-10 py-6 lg:py-10 pb-28 lg:pb-16 max-w-xl lg:max-w-none mx-auto w-full">
           <div className="flex items-center gap-2 mb-5 lg:hidden">
             <img src={img} alt="Logo" className="w-8 h-8" />
-            <span className="font-extrabold text-sm text-neutral-900">Urinji Quick Dine</span>
+            <span className="font-extrabold text-sm text-neutral-900">Urunji Quick Dine</span>
           </div>
 
           <Routes>
