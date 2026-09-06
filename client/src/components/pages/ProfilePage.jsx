@@ -31,7 +31,7 @@ export function ProfilePage({
       <h1 className="text-2xl font-extrabold text-neutral-900 mb-1">Your activity</h1>
       <p className="text-sm text-neutral-500 mb-6">Orders from the last 7 days</p>
 
-      <div className="bg-white rounded-3xl shadow-sm p-5 mb-7 flex flex-col sm:flex-row items-center gap-6">
+      <div className="bg-white rounded-3xl shadow-sm border-1 border-neutral-200 p-5 mb-7 flex flex-col sm:flex-row items-center gap-6">
         <div className="relative w-40 h-40 shrink-0">
           <svg viewBox="0 0 120 120" className="w-40 h-40 -rotate-90">
             <circle cx="60" cy="60" r={radius} fill="none" stroke="#F1F1F1" strokeWidth="12" />
@@ -79,7 +79,7 @@ export function ProfilePage({
         </div>
       </div>
 
-      <div className="bg-white rounded-3xl shadow-sm p-5 flex items-center justify-between gap-3 mb-3">
+      <div className="bg-white rounded-3xl shadow-sm border-1 border-neutral-200 p-5 flex items-center justify-between gap-3 mb-3">
         <div className="min-w-0 flex items-center gap-3">
           <div className="w-9 h-9 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-500 shrink-0">
             {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
@@ -106,7 +106,7 @@ export function ProfilePage({
         </button>
       </div>
 
-      <div className="bg-white rounded-3xl shadow-sm p-5 flex items-center justify-between gap-3">
+      <div className="bg-white rounded-3xl shadow-sm border-1 border-neutral-200 p-5 flex items-center justify-between gap-3">
         <div className="min-w-0">
           <p className="font-semibold text-neutral-900 text-sm truncate">Signed in as {name}</p>
           <p className="text-xs text-neutral-400">Mzuzu, Malawi</p>

@@ -36,7 +36,7 @@ export function CartPage({ menu, cart, setCart, onCheckout }) {
       </div>
 
       {items.length === 0 ? (
-        <div className="flex flex-col items-center text-center py-16 bg-white rounded-3xl shadow-sm">
+        <div className="flex flex-col items-center text-center py-16 bg-white rounded-3xl shadow-sm border-1 border-neutral-200">
           <div className="w-16 h-16 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 mb-4">
             <Icon name="cart" className="w-7 h-7" />
           </div>
@@ -49,7 +49,7 @@ export function CartPage({ menu, cart, setCart, onCheckout }) {
             {items.map((item) => {
               const style = CATEGORY_STYLE[item.category];
               return (
-                <div key={item.id} className="flex items-center gap-3 bg-white rounded-2xl p-3 border border-neutral-100">
+                <div key={item.id} className="flex items-center gap-3 bg-white rounded-2xl p-3 border-1 border-neutral-200">
                   <div
                     className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl"
                     style={{ background: style.bg, color: style.accent }}
@@ -83,7 +83,7 @@ export function CartPage({ menu, cart, setCart, onCheckout }) {
             })}
           </div>
 
-          <div className="bg-white rounded-3xl shadow-sm p-5">
+          <div className="bg-white rounded-3xl shadow-sm border-1 border-neutral-200 p-5">
             <div className="flex items-center justify-between text-sm text-neutral-500 mb-2">
               <span>Subtotal</span>
               <span>{formatMK(subtotal)}</span>
