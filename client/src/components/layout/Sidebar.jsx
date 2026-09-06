@@ -15,7 +15,7 @@ export function Sidebar({ setPage, cartCount, name, isAdmin }) {
     <div className="hidden lg:flex flex-col w-64 shrink-0 h-screen sticky top-0 py-8 px-6 border-r border-neutral-200 bg-white">
       <div className="flex items-center gap-2 mb-10 text-neutral-900">
         <img src={img} alt="Logo" className="w-8 h-8" />
-        <span className="font-semibold text-lg tracking-tight">Urinji Quick Dine</span>
+        <span className="font-semibold text-lg tracking-tight">Urunji Quick Dine</span>
       </div>
       <nav className="space-y-1">
         {items.map((it) => (
