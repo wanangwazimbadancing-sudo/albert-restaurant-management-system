@@ -252,7 +252,7 @@ const App = () => {
       className={theme === "dark" ? "theme-dark min-h-screen relative" : "theme-light min-h-screen relative"}
       style={{
         fontFamily: "'Inter', sans-serif",
-        background: theme === "dark" ? "#0f172a" : "#ffffff",
+        background: theme === "dark" ? "#393b40" : "#ffffff",
         color: theme === "dark" ? "#e2e8f0" : "#111827",
       }}
     >
